@@ -13,7 +13,7 @@ func main() {
 	if c != "" {
 		panic("Введено больше двух операндов")
 	}
-	//countOperands(a, znak, b)
+	
 	rightOper(znak)             // проверяем на знак
 	if arabOrRome(a, b, znak) { // проверяем ввод операндов
 		cloneA, _ := strconv.Atoi(a)
@@ -93,8 +93,4 @@ func convertToRoman(arabNum int) string {
 	}
 	return result
 }
-func countOperands(a, znak, b, c string) {
-	if c > "" {
-		panic("Введено больше двух операндов")
-	}
-}
+
