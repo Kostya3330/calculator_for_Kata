@@ -49,7 +49,7 @@ func main() {
 	}
 
 }
-func arabOrRome(a, b, znak string) bool {
+func arabOrRome(a, b, znak string) bool { //проверка ввода
 	romeNumMap := map[string]int{"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5, "VI": 6, "VII": 7, "VIII": 8, "IX": 9, "X": 10}
 	arabicNumMap := map[string]int{"1": 1, "2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9, "10": 10}
 
@@ -66,7 +66,7 @@ func arabOrRome(a, b, znak string) bool {
 
 	panic("Введены неверные данные!")
 }
-func rightOper(znak string) bool {
+func rightOper(znak string) bool { // проверка на правильность введённого оператора
 	operatorMap := map[string]int{"+": 1, "-": 2, "*": 3, "/": 4}
 	if _, ok := operatorMap[znak]; !ok {
 		panic("Неверная арифметическая операция")
@@ -74,7 +74,7 @@ func rightOper(znak string) bool {
 	return true
 }
 
-func convertToRoman(arabNum int) string {
+func convertToRoman(arabNum int) string { // конвертация из арабских чисел в римские
 	var result string
 	var arabRom = []struct {
 		arabic   int
